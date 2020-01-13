@@ -1,5 +1,10 @@
 <!--pages/todo/todo.wxml-->
 <view class="main-container">
+  <view wx:if="{{isAddItemFormShow}}" class="add-item-form">
+    <span class="form-font">I Will Do:</span>
+    <input class="form-input" bindinput="inputContent"></input>
+    <view class="confirm-btn" bindtap="confirmAddOne">Confirm</view>
+  </view>
   <view class="todo-container">
     <view class="todo-item" wx:for="{{todoList}}">
       <view class="todo-index">{{index+1}}</view>
@@ -7,7 +12,7 @@
     </view>
   </view>
   <view class="tool-container">
-    <view class="tool-btn add-btn">
+    <view class="tool-btn add-btn" bindtap="addOneItem">
       <view class="add"></view>
     </view>
     <view class="tool-btn done-btn">

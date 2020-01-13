@@ -12,7 +12,38 @@ Page({
     }, {
       content: "Tofel Listening"
     }
-    ]
+    ],
+    isAddItemFormShow: true,
+    inputContent: "",
+  },
+
+  addOneItem: function (event) {
+    this.setData({
+      isAddItemFormShow: true,
+    });
+
+    // let newOne = {content: "Test new Add One"};
+    // this.data.todoList.push(newOne);
+    // this.setData({
+    //   todoList: this.data.todoList
+    // });
+  },
+
+  inputContent: function (e) {
+    this.setData({
+      inputContent: e.detail.value
+    })
+  },
+
+  confirmAddOne: function (event) {
+    console.log(this.data.inputContent);
+    this.data.todoList.push({
+      content: this.data.inputContent,
+    })
+    this.setData({
+      isAddItemFormShow: false,
+      todoList: this.data.todoList,
+    })
   },
 
   /**
