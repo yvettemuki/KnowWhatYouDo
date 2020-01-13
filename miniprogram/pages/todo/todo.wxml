@@ -1,0 +1,20 @@
+<!--pages/todo/todo.wxml-->
+<view class="main-container">
+  <view class="todo-container">
+    <view class="todo-item" wx:for="{{todoList}}">
+      <view class="todo-index">{{index+1}}</view>
+      <view class="todo-content">{{item.content}}</view>
+    </view>
+  </view>
+  <view class="tool-container">
+    <view class="tool-btn add-btn">
+      <view class="add"></view>
+    </view>
+    <view class="tool-btn done-btn">
+      Done  
+    </view>
+    <view class="tool-btn new-btn">
+      New  
+    </view>
+  </view>
+</view>

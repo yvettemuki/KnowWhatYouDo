@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/todo/todo",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -15,10 +16,10 @@
     "pages/im/room/room"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "Know What You Do",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
