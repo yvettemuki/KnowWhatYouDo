@@ -13,7 +13,7 @@ Page({
       content: "Tofel Listening"
     }
     ],
-    isAddItemFormShow: true,
+    isAddItemFormShow: false,
     inputContent: "",
   },
 
@@ -21,12 +21,6 @@ Page({
     this.setData({
       isAddItemFormShow: true,
     });
-
-    // let newOne = {content: "Test new Add One"};
-    // this.data.todoList.push(newOne);
-    // this.setData({
-    //   todoList: this.data.todoList
-    // });
   },
 
   inputContent: function (e) {
