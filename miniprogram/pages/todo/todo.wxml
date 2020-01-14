@@ -1,5 +1,5 @@
 <!--pages/todo/todo.wxml-->
-<view class="main-container">
+<view class="main-container" bindtap="refreshStatus">
   <view wx:if="{{isAddItemFormShow}}" class="add-item-form">
     <span class="form-font">I Will Do:</span>
     <input class="form-input" bindinput="inputContent"></input>
@@ -7,8 +7,21 @@
   </view>
   <view class="todo-container">
     <view class="todo-item" wx:for="{{todoList}}">
-      <view class="todo-index">{{index+1}}</view>
-      <view class="todo-content">{{item.content}}</view>
+      <view class="todo-index" data-index="{{index}}" bindtap="finishItem">
+        <view wx:if="{{item.status}}">{{index+1}}</view>
+        <image wx:else 
+        class="tick-icon" 
+        src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/tick.png?sign=406c7d8eba6f2a25378bd67d8695c67a&t=1578997338"></image>
+      </view>
+      <view class="todo-content" data-index="{{index}}" bindlongpress="deleteItem">
+        <view wx:if="{{deleteIndex == index}}" 
+          class="delete-btn" 
+          data-index="{{index}}"
+          bindtap="deleteSelectedOne">
+          Delete
+        </view>
+        <view class="todo-text" wx:else>{{item.content}}</view>
+      </view>
     </view>
   </view>
   <view class="tool-container">

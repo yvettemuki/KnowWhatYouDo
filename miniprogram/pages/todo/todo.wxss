@@ -1,12 +1,14 @@
 /* pages/todo/todo.wxss */
 .main-container {
   padding: 20px;
+  height: calc(100vh);
 }
 .todo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  overflow-y: scroll;
   background-color: #ffffff;
 
 }
@@ -21,14 +23,22 @@
 }
 .todo-content {
   height: 40px;
-  width: 65%;
+  width: 80%;
+}
+.todo-text {
+  line-height: 40px;
+  padding: 0 20px;
   color: #ffffff;
-  background-color: #1C86EE;
+  border-radius: 999px;
   box-shadow: 0 2px 8px 0px #dcdcdc;
+  background-color: #1C86EE;
+}
+.delete-btn {
+  color: #ffffff;
   line-height: 40px;
   border-radius: 999px;
   padding: 0 20px;
-  
+  background-color: #D64E4C;
 }
 .todo-index {
   height: 40px;
@@ -58,7 +68,7 @@
 }
 .add::before {
   content: '';
-  position: absolute;
+  position: absolute; 
   left: 50%;
   top: 50%;
   width: 12px;
@@ -84,7 +94,7 @@
   align-items: center;
   justify-content: center;
   margin-left: 20px;
-  margin-top:20px;
+  margin-top:10px;
   box-shadow: 0 2px 8px 0px #dcdcdc;
 }
 .add-btn {
@@ -149,4 +159,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.tick-icon {
+  height: 12px;
+  width: 12px;
 }
