@@ -11,28 +11,35 @@
         <view wx:if="{{item.status}}">{{index+1}}</view>
         <image wx:else 
         class="tick-icon" 
-        src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/tick.png?sign=406c7d8eba6f2a25378bd67d8695c67a&t=1578997338"></image>
+        src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/tick.png?sign=b89ce7c8f6f7b3b803efe029da31e8c4&t=1579259232"></image>
       </view>
       <view class="todo-content" data-index="{{index}}" bindlongpress="deleteItem">
         <view wx:if="{{deleteIndex == index}}" 
           class="delete-btn" 
           data-index="{{index}}"
           bindtap="deleteSelectedOne">
-          Delete
+          <image class="delete-icon" src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/delete_icon.png?sign=4aaca9a86498918cc90cba8a6829f148&t=1579259684"/>
+          <span>Delete</span>
         </view>
         <view class="todo-text" wx:else>{{item.content}}</view>
       </view>
     </view>
   </view>
+  <view class="add-btn" bindtap="addOneItem">
+    <view class="add"></view>
+  </view>
   <view class="tool-container">
-    <view class="tool-btn add-btn" bindtap="addOneItem">
-      <view class="add"></view>
-    </view>
     <view class="tool-btn done-btn">
       Done  
     </view>
     <view class="tool-btn new-btn">
       New  
+    </view>
+    <view class="tool-btn new-btn">
+      record  
+    </view>
+    <view class="menu-btn">
+      <image class="menu-icon" src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/menu_icon.png?sign=4f31de816158c54db3c999aa6d769238&t=1579260643"/>
     </view>
   </view>
 </view>
