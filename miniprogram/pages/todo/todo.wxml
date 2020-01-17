@@ -29,14 +29,17 @@
     <view class="add"></view>
   </view>
   <view class="tool-container">
-    <view class="tool-btn done-btn">
-      Done  
+    <view class="tool-btn">
+      <image class="tool-icon" src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/done_icon.png?sign=5443564a5a2d9bf84a4bf4c5f0547638&t=1579261589"/>
+      <view class="tool-name">done</view>  
     </view>
-    <view class="tool-btn new-btn">
-      New  
+    <view class="tool-btn">
+      <image class="tool-icon" src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/add_icon.png?sign=e67d06b75348d0336f5799a0134ef247&t=1579261979"/>
+      <view class="tool-name">new</view>  
     </view>
-    <view class="tool-btn new-btn">
-      record  
+    <view class="tool-btn">
+      <image class="tool-icon" src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/record_icon.png?sign=41c348126f88c15208e8eb4cfc55cfe3&t=1579262048"/>
+      <view class="tool-name">record</view>  
     </view>
     <view class="menu-btn">
       <image class="menu-icon" src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/menu_icon.png?sign=4f31de816158c54db3c999aa6d769238&t=1579260643"/>
