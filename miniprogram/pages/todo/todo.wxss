@@ -20,19 +20,22 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 10px;
-  
 }
 .todo-content {
-  height: 40px;
   width: 80%;
 }
 .todo-text {
-  line-height: 40px;
-  padding: 0 20px;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
   color: #ffffff;
-  border-radius: 999px;
+  border-radius: 20px;
   box-shadow: 0 2px 8px 0px #dcdcdc;
   background-color: #1C86EE;
+  word-wrap:break-word; 
+  word-break:break-all; 
+  overflow: hidden;
 }
 .delete-btn {
   display: flex;
