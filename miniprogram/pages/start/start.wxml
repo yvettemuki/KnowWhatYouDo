@@ -1,0 +1,7 @@
+<!--pages/start/start.wxml-->
+<view class="start-container">
+  <image class="todo-logo" src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/logo.png?sign=cec2d7233303f917fafb44c548383606&t=1579529536"/>
+  <view class="app-name">Know What You Do</view>
+  <view class="app-subtitle">and do it well</view>
+  <!-- <button class="start-btn" bindtap="onGetOpenid">start to use</button> -->
+</view>

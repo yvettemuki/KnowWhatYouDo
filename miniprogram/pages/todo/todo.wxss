@@ -11,7 +11,6 @@
   overflow-y: scroll;
   padding-top: 20px;
   background-color: #ffffff;
-
 }
 .todo-item {
   width: 100%;

@@ -1,0 +1,4 @@
+<!--pages/record/record.wxml-->
+<view>
+  <view wx:for="{{recordList}}"></view>
+</view>
