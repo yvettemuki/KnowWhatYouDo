@@ -17,23 +17,12 @@ Page({
     isAddItemFormShow: false,
     inputContent: "",
     deleteIndex: -1,
-    isMenuShow: true,
+    isMenuShow: false,
     animationData: {}
   },
 
   onShow: function () {
-    var animation = wx.createAnimation({
-      duration: 1000,
-      timingFunction: 'ease'
-    })
-
-    this.animation = animation;
-
-    animation.translate(-30).step();
-
-    this.setData({
-      animationData: animation.export()
-    });
+    
   },
 
 
@@ -109,9 +98,28 @@ Page({
   },
   
   clickMenu: function () {
-    this.setData({
-      isMenuShow: !this.data.isMenuShow
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease'
     })
+
+    this.animation = animation;
+
+    if (this.data.isMenuShow) {
+      animation.width(60).step();
+    } else {
+      animation.width(280).step();
+    }
+
+    this.setData({
+      animationData: animation.export(),
+    });
+
+    setTimeout(function() {
+      this.setData({
+        isMenuShow: !this.data.isMenuShow
+      })
+    }.bind(this), 400);
   },
 
 
