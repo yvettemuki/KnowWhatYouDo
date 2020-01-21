@@ -3,17 +3,18 @@ Page({
 
   
   data: {
-    todoList:[{
-      content: "Typeflow editor coding",
-      status: true, // true:unfinish false:finish
-    }, {
-      content: "Tofel Reading",
-      status: true,
-    }, {
-      content: "Tofel Listening",
-      status: true,
-    }
-    ],
+    // todoList:[{
+    //   content: "Typeflow editor coding",
+    //   status: true, // true:unfinish false:finish
+    // }, {
+    //   content: "Tofel Reading",
+    //   status: true,
+    // }, {
+    //   content: "Tofel Listening",
+    //   status: true,
+    // }
+    // ],
+    todoList: [],
     isAddItemFormShow: false,
     inputContent: "",
     deleteIndex: -1,
