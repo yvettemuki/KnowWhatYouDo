@@ -196,3 +196,16 @@
   font-size: 11px;
   line-height: 12px;
 }
+.test-container {
+  width: 280px;
+  height: 60px;
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 999px 0 0 999px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px 0 #dcdcdc;
+}

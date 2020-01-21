@@ -18,7 +18,24 @@ Page({
     inputContent: "",
     deleteIndex: -1,
     isMenuShow: true,
+    animationData: {}
   },
+
+  onShow: function () {
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease'
+    })
+
+    this.animation = animation;
+
+    animation.translate(-30).step();
+
+    this.setData({
+      animationData: animation.export()
+    });
+  },
+
 
   addOneItem: function (event) {
     this.setData({
