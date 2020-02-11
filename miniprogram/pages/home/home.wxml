@@ -1,2 +1,14 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="home-container">
+  <view wx:if="{{allTodoList.length > 0}}" class="list-container">
+    <view wx:for="{{allTodoList}}" class="list-item">
+      <view>
+        <view class="item-name">{{item.name}}</view>
+        <view class="item-create-time">{{item.createTime}}</view>
+      </view>
+      <image src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/more.png?sign=e2fe2fdae04ac845d3e0f318bc66cc38&t=1581397304" class="item-more" bindtap="clickMore"/>
+    </view>
+  </view>
+  <view wx:else class="no-list-container">
+  </view>
+</view>

@@ -2,7 +2,7 @@
 <view class="main-container" bindtap="refreshStatus">
   <view wx:if="{{isAddItemFormShow}}" class="add-item-form">
     <span class="form-font">I Will Do:</span>
-    <input class="form-input" bindinput="inputContent"></input>
+    <input class="form-input" bindinput="getInputValue"></input>
     <view class="confirm-btn" bindtap="confirmAddOne">Confirm</view>
   </view>
 

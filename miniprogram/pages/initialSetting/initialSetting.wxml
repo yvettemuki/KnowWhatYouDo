@@ -1,0 +1,6 @@
+<!--pages/initialSetting/initialSetting.wxml-->
+<view class="initial-setting-container">
+  <span class="form-font">Please add your user name:</span>
+  <input class="form-input" bindinput="getInputValue"></input>
+  <view class="confirm-btn" bindtap="confirmAddName">Confirm</view>
+</view>

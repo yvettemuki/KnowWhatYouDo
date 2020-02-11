@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/start/start",
+    "pages/initialSetting/initialSetting",
     "pages/home/home",
     "pages/todo/todo",
     "pages/record/record"

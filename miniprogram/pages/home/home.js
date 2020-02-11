@@ -1,65 +1,53 @@
 // pages/home/home.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+  
   data: {
-
+    allTodoList: [{
+      name: "About work",
+      createTime: "2020-2-3 12:23:33"
+    }, {
+      name: "About study",
+      createTime: "2020-2-8 20:23:33"
+    }]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  //加载时候被调用，可以携带参数
   onLoad: function (options) {
-
+    
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+  
   onReady: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
+  //显示的时候被调用，不可以携带参数
   onShow: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
+  
   onHide: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
+  
   onUnload: function () {
 
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
+  
   onPullDownRefresh: function () {
 
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
+  
   onReachBottom: function () {
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
+  
   onShareAppMessage: function () {
 
   }

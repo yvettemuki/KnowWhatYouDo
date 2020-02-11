@@ -25,7 +25,7 @@ Page({
     });
   },
 
-  inputContent: function (e) {
+  getInputValue: function (e) {
     this.setData({
       inputContent: e.detail.value
     })

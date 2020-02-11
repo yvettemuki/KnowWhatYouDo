@@ -1,1 +1,28 @@
 /* pages/home/home.wxss */
+.home-container {
+  padding: 20px;
+}
+.list-item {
+  padding: 10px 30px;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 2px 8px 0 #dcdcdc;
+  border-radius: 999px;  
+}
+.item-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.item-create-time {
+  font-size: 10px;
+  color: #5f5f5f;
+  font-weight: bold;
+}
+.item-more {
+  width: 20px;
+  height: 20px;
+}

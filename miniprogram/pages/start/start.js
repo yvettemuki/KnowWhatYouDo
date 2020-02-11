@@ -28,17 +28,24 @@ Page({
   getUserInfo: function () {
     const db = wx.cloud.database();
     db.collection('user').where({
-      _openid: app.globalData.openid
+      openid: app.globalData.openid
     }).get().then(res => {
       console.log(res);
       if (res.data.length <= 0) {
         db.collection('user').add({
           data: {
+            name: "",
             openid: app.globalData.openid
           },
           success: res => {
+            let userinfo = {
+              userid: res._id,
+              openid: app.globalData.openid,
+              name: ""
+            }
+            wx.setStorageSync("userinfo", userinfo)
             wx.navigateTo({
-              url: '../todo/todo',
+              url: '../initialSetting/initialSetting',
             })
           },
           fail: err => {
@@ -47,10 +54,16 @@ Page({
             })
           }
         })
+      } else if (res.data[0].name.length <= 0) {
+        wx.navigateTo({
+          url: '../initialSetting/initialSetting',
+        })
       }
-      wx.navigateTo({
-        url: '../todo/todo',
-      })
+      else {
+        wx.navigateTo({
+          url: '../home/home',
+        })
+      }
     })
     
   },
