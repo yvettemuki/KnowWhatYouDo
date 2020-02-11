@@ -3,22 +3,14 @@ Page({
 
   
   data: {
-    // todoList:[{
-    //   content: "Typeflow editor coding",
-    //   status: true, // true:unfinish false:finish
-    // }, {
-    //   content: "Tofel Reading",
-    //   status: true,
-    // }, {
-    //   content: "Tofel Listening",
-    //   status: true,
-    // }
-    // ],
-    todoList: [],
+    todoList:[{
+      content: "About the action you want to do",
+      status: true, // true:unfinish false:finish
+    }],
     isAddItemFormShow: false,
     inputContent: "",
     deleteIndex: -1,
-    isMenuShow: false,
+    isMenuShow: true,
     animationData: {}
   },
 
