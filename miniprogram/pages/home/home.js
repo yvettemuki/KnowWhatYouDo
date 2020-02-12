@@ -1,20 +1,35 @@
 // pages/home/home.js
+import dateFormat from '../../utils/dateFormat.js'
+
 Page({
 
   
   data: {
-    allTodoList: [{
-      name: "About work",
-      createTime: "2020-2-3 12:23:33"
-    }, {
-      name: "About study",
-      createTime: "2020-2-8 20:23:33"
-    }]
+    taskList: []
+  },
+
+  addTask: function () {
+    // const db = wx.cloud.database()
+    // db.collection('task').add({
+    //   data: {
+    //     name: "About study",
+    //     userid: wx.getStorageSync('userinfo').userid,
+    //     createTime: new Date(),
+    //     updateTime: new Date(),
+    //     status: 0 // 0未完成 1完成 2删除
+    //   }
+    // }).then(res => {
+    //   console.log(res);
+    // })
+  },
+
+  parseDate: function (date) {
+    return dateFormat(date)
   },
 
   //加载时候被调用，可以携带参数
   onLoad: function (options) {
-    
+
   },
 
   
@@ -24,7 +39,20 @@ Page({
 
   //显示的时候被调用，不可以携带参数
   onShow: function () {
-
+    const db = wx.cloud.database()
+    db.collection('task').where({
+      userid: wx.getStorageSync('userinfo').userid,
+      status: 0 //未完成的
+    }).get().then(res => {
+      console.log(res)
+      let resList = res.data.map(task => {
+        Object.assign(task, {createTime: this.parseDate(task.createTime)})
+        return task
+      })
+      this.setData({
+        taskList: resList
+      })
+    })
   },
 
   

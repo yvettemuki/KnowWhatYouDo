@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
 <view class="home-container">
-  <view wx:if="{{allTodoList.length > 0}}" class="list-container">
-    <view wx:for="{{allTodoList}}" class="list-item">
+  <view wx:if="{{taskList.length > 0}}" class="list-container">
+    <view wx:for="{{taskList}}" class="list-item">
       <view>
         <view class="item-name">{{item.name}}</view>
         <view class="item-create-time">{{item.createTime}}</view>
@@ -10,5 +10,7 @@
     </view>
   </view>
   <view wx:else class="no-list-container">
+    No task has been created, you can add one.
   </view>
+  <view bindtap="addTask">add list</view>
 </view>
