@@ -14,8 +14,8 @@ Page({
     animationData: {}
   },
 
-  onShow: function () {
-    
+  onLoad: function (options) {
+    console.log(options)
   },
 
 

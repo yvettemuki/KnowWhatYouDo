@@ -8,7 +8,7 @@
 
   <view class="todo-container">
     <view wx:if="{{todoList.length < 0}}" class="no-todo">click "+" to new the </view>
-    <view class="todo-item" wx:for="{{todoList}}">
+    <view class="todo-item" wx:for="{{todoList}}" wx:key="index">
       <view class="todo-index" data-index="{{index}}" bindtap="finishItem">
         <view wx:if="{{item.status}}">{{index+1}}</view>
         <image wx:else 

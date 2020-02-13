@@ -23,6 +23,13 @@ Page({
     // })
   },
 
+  toTodoPage: function (e) {
+    let index = e.currentTarget.dataset.index
+    wx.navigateTo({
+      url: "../todo/todo?taskid"+"="+this.data.taskList[index]._id,
+    })
+  },
+
   parseDate: function (date) {
     return dateFormat(date)
   },
