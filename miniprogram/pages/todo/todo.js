@@ -3,10 +3,7 @@ Page({
 
   
   data: {
-    todoList:[{
-      content: "About the action you want to do",
-      status: true, // true:unfinish false:finish
-    }],
+    todoList:[],
     isAddItemFormShow: false,
     inputContent: "",
     deleteIndex: -1,
@@ -16,6 +13,20 @@ Page({
 
   onLoad: function (options) {
     console.log(options)
+    let taskid = options.taskid
+    const db = wx.cloud.database()
+    db.collection('todo').where({
+      taskid: taskid
+    }).get().then(res => {
+      let resList = res.data.filter(item => {
+        if (item.status != 2) {
+          return item
+        }
+      })
+      this.setData({
+        todoList: resList
+      })
+    })
   },
 
 

@@ -10,7 +10,7 @@
     <view wx:if="{{todoList.length < 0}}" class="no-todo">click "+" to new the </view>
     <view class="todo-item" wx:for="{{todoList}}" wx:key="index">
       <view class="todo-index" data-index="{{index}}" bindtap="finishItem">
-        <view wx:if="{{item.status}}">{{index+1}}</view>
+        <view wx:if="{{item.status == 0}}">{{index+1}}</view>
         <image wx:else 
         class="tick-icon" 
         src="https://746f-todo-cloud-9uvqj-1256959450.tcb.qcloud.la/tick.png?sign=b89ce7c8f6f7b3b803efe029da31e8c4&t=1579259232"></image>

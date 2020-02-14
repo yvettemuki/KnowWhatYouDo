@@ -9,18 +9,19 @@ Page({
   },
 
   addTask: function () {
-    // const db = wx.cloud.database()
-    // db.collection('task').add({
-    //   data: {
-    //     name: "About study",
-    //     userid: wx.getStorageSync('userinfo').userid,
-    //     createTime: new Date(),
-    //     updateTime: new Date(),
-    //     status: 0 // 0未完成 1完成 2删除
-    //   }
-    // }).then(res => {
-    //   console.log(res);
-    // })
+    const db = wx.cloud.database()
+    db.collection('todo').add({
+      data: {
+        taskid: "0ec685215e43c5e70e7b0c9516963baa",
+        userid: wx.getStorageSync('userinfo').userid,
+        createTime: new Date(),
+        updateTime: new Date(),
+        content: "gre volcabulary 500 finshed",
+        status: 0 // 0未完成 1完成 2删除
+      }
+    }).then(res => {
+      console.log(res);
+    })
   },
 
   toTodoPage: function (e) {
